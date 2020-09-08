@@ -1,0 +1,58 @@
+.title{
+	height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.images{
+	display: flex;
+	justify-content: space-around;
+}
+
+.img-container{
+	background: black;
+	width: 800px;
+	height: 500px;
+	border: 10px solid black;
+	position: relative;
+}
+
+.img-container img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.transition-image{
+	position: absolute;
+	top: 100;
+	left: 0;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.transition-image:hover{
+	opacity: 1;
+}
+
+.fade::after{
+	content: "The Trees";
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	height: 100%;
+	width: 100%;
+	background: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.fade:hover::after{
+	opacity: 0.6;
+}
